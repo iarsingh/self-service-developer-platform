@@ -72,3 +72,7 @@ Each check comes back with `passed`, and a failed check carries the reason. One 
 - Approving a blocked request (409).
 - The requester approving their own request (403).
 - A `python-service` without an availability target from 95 to 99.95.
+
+## Ops plane
+
+Workspaces, tenant isolation, job approval, and audit live under `/v1`. Production apply is refused. See `docs/ARCHITECTURE.md`.

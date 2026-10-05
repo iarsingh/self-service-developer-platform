@@ -1,9 +1,11 @@
+from idp.ops import router as ops_router
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 
 from idp.catalog import TEMPLATES, Catalog, CatalogError
 
 app = FastAPI(title="Internal developer platform")
+app.include_router(ops_router, prefix="/v1")
 CATALOG = Catalog()
 
 
